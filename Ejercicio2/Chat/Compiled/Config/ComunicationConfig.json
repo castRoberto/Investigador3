@@ -1,0 +1,36 @@
+{
+  "login" : {
+    "username" : "cot",
+    "password" : "cot",
+    "host" : "192.168.0.50",
+    "vhost" : ""
+  },
+  "Consumer" : {
+    "queue" : {
+      "name" : "",
+      "durable" : false,
+      "autodelete" : false,
+      "passive" : false,
+      "exclusive" : true
+    },
+    "exchange" : {
+      "name" : "aranda",
+      "durable" : true,
+      "autodelete" : false,
+      "passive" : false,
+      "internal" : false,
+      "type" : "topic",
+      "routingKeys" : [ "aranda.#" ]
+    }
+  },
+  "Producer" : {
+    "exchange" : {
+      "name" : "aranda",
+      "durable" : true,
+      "autodelete" : false,
+      "passive" : false,
+      "internal" : false,
+      "type" : "topic"
+    }
+  }
+}

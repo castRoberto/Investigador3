@@ -1,0 +1,36 @@
+{
+  "login" : {
+    "username" : "rcastro",
+    "password" : "rcastro",
+    "host" : "192.168.1.8",
+    "vhost" : ""
+  },
+  "Consumer" : {
+    "queue" : {
+      "name" : "",
+      "durable" : false,
+      "autodelete" : false,
+      "passive" : false,
+      "exclusive" : true
+    },
+    "exchange" : {
+      "name" : "aranda",
+      "durable" : true,
+      "autodelete" : false,
+      "passive" : false,
+      "internal" : false,
+      "type" : "topic",
+      "routingKeys" : [ "aranda.*", "aranda.data" ]
+    }
+  },
+  "Producer" : {
+    "exchange" : {
+      "name" : "aranda",
+      "durable" : true,
+      "autodelete" : false,
+      "passive" : false,
+      "internal" : false,
+      "type" : "topic"
+    }
+  }
+}
